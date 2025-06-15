@@ -4,16 +4,16 @@ A secure and scalable authentication service for microservices using **RS256 (RS
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [✨ Features](#-features)
-- [📐 Architecture](#-architecture)
-- [🔐 Key Generation](#-key-generation)
-- [🚀 Usage](#-usage)
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Key Generation](#-key-generation)
+- [Usage](#-usage)
 
 ---
 
-## ✨ Features
+## Features
 
 ✅ Centralized **Auth Service** that signs tokens with a **private RSA key**  
 ✅ Microservices verify tokens using **public RSA key**  
@@ -25,7 +25,7 @@ A secure and scalable authentication service for microservices using **RS256 (RS
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```
 
