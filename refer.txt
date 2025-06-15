@@ -1,3 +1,21 @@
+DEPICTION OF CUSTOM AUTH
+
++-------------+           +-------------------+           +------------------+
+|   Client    |           |   Auth Service    |           |  API Service A   |
++-------------+           +-------------------+           +------------------+
+       │                         │                                │
+       ├── Login Request ───────▶│                                │
+       │                         ├── Validates login              │
+       │                         └── Signs JWT with private key   │
+       ◀──── Token (JWT) ────────┘                                │
+       │                                                          │
+       ├─ Request: Authorization: Bearer <JWT> ──────────────────▶│
+       │                                                          ├── Fetches public key from Auth (if not cached)
+       │                                                          ├── Verifies JWT signature & claims
+       │                                                          └── Grants access if valid
+
+
 FOR GENERATING PRIVATE AND PUBLIC KEY
 openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
 openssl rsa -pubout -in private.pem -out public.pem
+
